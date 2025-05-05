@@ -1,24 +1,20 @@
-import React from 'react'
-import { View } from 'react-native'
-
-import Todo from './Todo'
+import React from 'react';
+import { View } from 'react-native';
+import Todo from './Todo';
 
 const TodoList = ({ todos, deleteTodo, toggleComplete }) => {
-  todos = todos.map((todo, i) => {
-    return (
-      <Todo
-        deleteTodo={deleteTodo}
-        toggleComplete={toggleComplete}
-        key={i}
-        todo={todo} />
-    )
-  })
-
   return (
     <View>
-      {todos}
+      {todos.map((todo) => (
+        <Todo
+          key={todo.id || todo.text} // use a unique ID if available
+          todo={todo}
+          deleteTodo={deleteTodo}
+          toggleComplete={toggleComplete}
+        />
+      ))}
     </View>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;
