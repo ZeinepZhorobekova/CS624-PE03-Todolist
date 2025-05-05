@@ -1,7 +1,8 @@
+import React from 'react';
 import App from './App';
 
-export default function HomeScreen() {
-  return (
-    <App />
-  );
-}
+const HomeScreen = () => {
+  return <App />;
+};
+
+export default HomeScreen;
