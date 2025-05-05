@@ -1,1 +1,1 @@
-# CS624-PE03-Todolist
+# CS624-PE03-Todos
